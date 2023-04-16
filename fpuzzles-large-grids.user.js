@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Extend grid size limit in f-puzzles.
 // @author       Chameleon
-// @updateURL    https://github.com/yusitnikov/fpuzzles-letters/raw/main/fpuzzles-large-grids.user.js
+// @updateURL    https://github.com/yusitnikov/fpuzzles-large-grids/raw/main/fpuzzles-large-grids.user.js
 // @match        https://*.f-puzzles.com/*
 // @match        https://f-puzzles.com/*
 // @grant        none
