@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fpuzzles-LargeGrids
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Extend grid size limit in f-puzzles.
 // @author       Chameleon
 // @updateURL    https://github.com/yusitnikov/fpuzzles-large-grids/raw/main/fpuzzles-large-grids.user.js
@@ -23,7 +23,12 @@
 
         if (window.onload && window.boolConstraints) {
             console.log("Reloading the puzzle...");
+            const prevButtons = buttons.splice(0, buttons.length);
             window.onload();
+            buttons.splice(0, buttons.length);
+            for (const prevButton of prevButtons) {
+                buttons.push(prevButton);
+            }
         } else {
             console.log("No need to reload the puzzle.");
         }
