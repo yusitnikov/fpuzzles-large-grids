@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Fpuzzles-LargeGrids
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Extend grid size limit in f-puzzles.
 // @author       Chameleon
 // @updateURL    https://github.com/yusitnikov/fpuzzles-large-grids/raw/main/fpuzzles-large-grids.user.js
@@ -19,6 +19,10 @@
                     sizes[i] = {w: i / h, h};
                 }
             }
+        }
+
+        if (window.onload && window.boolConstraints) {
+            window.onload();
         }
     };
 
